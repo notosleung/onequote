@@ -3,6 +3,9 @@ import type { Quote } from '@/types/Quote'
 export const quotes: Quote[] = [
   {
     content: '码力全开',
+    comeFrom: {
+      someone: 'Chawye Hsu',
+    },
   },
   {
     content: '怀念总是突然怀念不谈条件',
