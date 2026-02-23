@@ -3,9 +3,7 @@
     <div class="bracket left">
       『
     </div>
-    <div class="word">
-      {{ myQuote.content }}
-    </div>
+    <div class="word" v-html="myQuote.content.replace(/\n/g, '<br>')" />
     <div class="bracket right">
       』
     </div>
@@ -66,7 +64,7 @@ const { pause, resume, isActive } = useIntervalFn(() => {
   padding: 15px 50px;
 }
 .onequote-fullpage .author {
-  font-size: 20px;
+  font-size: 1.5rem;
   color: rgba(0, 0, 0, 0.8);
   float: right;
   margin-top: 40px;
@@ -86,7 +84,11 @@ const { pause, resume, isActive } = useIntervalFn(() => {
   }
 
   .onequote-fullpage .word {
+    font-size: 1rem;
     line-height: 2.6rem !important;
+  }
+  .onequote-fullpage .author {
+    font-size: 1rem;
   }
 }
 </style>

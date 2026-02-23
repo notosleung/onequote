@@ -8,6 +8,251 @@ export const quotes: Quote[] = [
     },
   },
   {
+    content: 'Welcome to the real world.\n It sucks. You\'re gonna love it.',
+    comeFrom: {
+      someone: 'Monica',
+      somewhere: 'Friends',
+    },
+  },
+  {
+    content: 'See? He\'s her lobster.',
+    comeFrom: {
+      someone: 'Pheobe',
+      somewhere: 'Friends',
+    },
+  },
+  {
+    content: 'We were on a break!',
+    comeFrom: {
+      someone: 'Ross',
+      somewhere: 'Friends',
+    },
+  },
+  {
+    content: '我属于你的曾经\n 不属于我的命运',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '命运',
+    },
+  },
+  {
+    content: '能不能暂时把你的梦想给我\n 在勇气快消失的时候',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '约翰蓝侬',
+    },
+  },
+  {
+    content: '如果我爱上\n 你的笑容，\n 要怎么收藏\n 要怎么拥有',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '知足',
+    },
+  },
+  {
+    content: '怎么去拥有\n 一道彩虹，\n 怎么去拥抱\n 一夏天的风',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '知足',
+    },
+  },
+  {
+    content: '天空和我的中间\n 只剩倾盆的思念',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '步步',
+    },
+  },
+  {
+    content: '这世界全部的漂亮\n 不过你的可爱模样',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '爱情的模样',
+    },
+  },
+  {
+    content: '你是何时\n 偷偷拯救我\n 在我掌心\n 放了，一颗糖果',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '因为你所以我',
+    },
+  },
+  {
+    content: '是你\n 爱你让我变得更强\n 为你战斗永不投降',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '让我照顾你',
+    },
+  },
+  {
+    content: '幻想着未来\n 满头白发\n 公园的长椅上',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '让我照顾你',
+    },
+  },
+  {
+    content: '逆风的方向，更适合飞翔\n 我不怕千万人阻挡只怕自己投降',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '倔强',
+    },
+  },
+  {
+    content: '我的故事，被风吹散\n 我的明天，我从不期待',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '候鸟',
+    },
+  },
+  {
+    content: '飞过那片，茫茫人海\n 下个路口，直走或转弯',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '候鸟',
+    },
+  },
+  {
+    content: 'We stupid but strong\n 放学的屋顶，像万人广场\n 从不多想，只是信仰\n 少年回头望笑我还不快跟上',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '成名在望',
+    },
+  },
+  {
+    content: 'While we were so young\n 我梦到当时，我们翻过墙\n 曼陀罗花，沿途绽放\n 我们光脚穿过人间荒唐',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '成名在望',
+    },
+  },
+  {
+    content: '这是我自传，最终章\n 写这首长诗，用一生时光\n 躯壳会解脱，药罐和空房\n 我从婴儿床，再重回光芒',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '自传',
+    },
+  },
+  {
+    content: '我如果有梦，梦要够疯，够疯才能变成英雄，总会有一篇我的传说',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '咸鱼',
+    },
+  },
+  {
+    content: '我如果有梦，有没有错，错过才会更加明白，明白坚持是什么',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '咸鱼',
+    },
+  },
+  {
+    content: '为何人生最后会想一张纸屑\n 还不如一片花瓣，曾经鲜艳',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '如烟',
+    },
+  },
+  {
+    content: '有没有那么一朵玫瑰，永远不凋谢，\n 永远骄傲和完美，永远不妥协',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '如烟',
+    },
+  },
+  {
+    content: '第一站叫天真，第二站叫青春\n 下一站的名字，等你去确认',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '第二人生',
+    },
+  },
+  {
+    content: '生命不是过程，而是美丽旅程',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '第二人生',
+    },
+  },
+  {
+    content: '谁说不能让我此生唯一自传\n 如同诗一般\n 无论多远未来\n 读来依然一字一句一篇都灿烂',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '后青春的诗',
+    },
+  },
+  {
+    content: '然后呢，一起走吧',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '后青春的诗',
+    },
+  },
+  {
+    content: '所以我说，就让他去，\n 我知道潮落之后一定有潮起，\n 有什么了不起',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '人生海海',
+    },
+  },
+  {
+    content: '无论是我的明天，要去哪里，\n 而至少快乐伤心我自己决定',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '人生海海',
+    },
+  },
+  {
+    content: '勇敢地告别，勇敢地向过去和未来告别',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '诺亚方舟',
+    },
+  },
+  {
+    content: '这一生志愿只要平凡快乐\n 谁说这样不伟大呢',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '笑忘歌',
+    },
+  },
+  {
+    content: '每个梦都像任意门往不同世界，\n 而你的故事，现在正是起点',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '任意门',
+    },
+  },
+  {
+    content: '你问我全世界是哪里最美\n 答案是你身边',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '任意门',
+    },
+  },
+  {
+    content: '平凡的我们，也将回到平凡的世界',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '任意门',
+    },
+  },
+  {
+    content: '七号公园，初次登场是那个三月，自强隧道，漫长得像永远',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '任意门',
+    },
+  },
+  {
+    content: '有一天，就是今天，今天就是有一天，说出一直没说对你的感谢，和你再干一杯',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '干杯',
+    },
+  },
+  {
     content: '怀念总是突然怀念不谈条件',
     comeFrom: {
       someone: '五月天',
@@ -15,21 +260,41 @@ export const quotes: Quote[] = [
     },
   },
   {
-    content: '活着其实很好，再吃一颗苹果',
+    content: '反正就这样吧\n 我知道我努力过',
     comeFrom: {
       someone: '五月天',
       somewhere: '一颗苹果',
     },
   },
   {
-    content: '活人也需要破地狱的，活人也有很多地狱',
+    content: '有些人经过我身旁，住在我脑中，在我心里钻洞。\n 有些人变成相片，堆在角落，灰尘像雪一般冰冻',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '一颗苹果',
+    },
+  },
+  {
+    content: '活着不多不少\n 幸福刚好够用',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '一颗苹果',
+    },
+  },
+  {
+    content: '总之，住够，就好走啦\n 打开门，行出去，去远啲',
+    comeFrom: {
+      somewhere: '饭戏攻心',
+    },
+  },
+  {
+    content: '生人都要破地狱噶，\n 生人都好多地狱',
     comeFrom: {
       someone: '魏道生',
       somewhere: '破·地狱',
     },
   },
   {
-    content: '我努力了无数次，我知道机会只会出现在其中一两次',
+    content: '不是的，我努力了无数次，我知道机会只会出现在其中一两次',
     comeFrom: {
       someone: '张驰',
       somewhere: '飞驰人生2',
@@ -96,7 +361,7 @@ export const quotes: Quote[] = [
     },
   },
   {
-    content: '我总是努力确保我身边的人感到舒适，直到后来我才发现，全程感到不适的人只有我自己',
+    content: '我总是努力确保我身边的人感到舒适，\n 直到后来我才发现，全程感到不适的人只有我自己',
     comeFrom: {
       somewhere: '冷兔',
     },
@@ -162,12 +427,6 @@ export const quotes: Quote[] = [
     },
   },
   {
-    content: '减少对他人的期待，会让自己好过一点哦',
-    comeFrom: {
-      somewhere: '冷兔',
-    },
-  },
-  {
     content: '过目不忘的人一定很厉害，而过目就忘的人一定很快乐',
     comeFrom: {
       somewhere: '冷兔',
@@ -186,7 +445,7 @@ export const quotes: Quote[] = [
     },
   },
   {
-    content: '有时候你觉得和某人关系特别好，后来会发现也就是你觉得而已',
+    content: '有时候你觉得和某人关系特别好，\n 后来会发现也就是你觉得而已',
     comeFrom: {
       somewhere: '冷兔',
     },
@@ -270,7 +529,7 @@ export const quotes: Quote[] = [
     },
   },
   {
-    content: '有人说声明始于三十岁，有人说生命始于五十岁。其实都不对，声明始于你不再取悦围观者的那一天',
+    content: '有人说生命始于三十岁，有人说生命始于五十岁。\n 其实都不对，生命始于你不再取悦围观者的那一天',
     comeFrom: {
       somewhere: '微博',
     },
@@ -285,6 +544,18 @@ export const quotes: Quote[] = [
     content: '允许自己熬夜，允许自己把衣服在椅子上堆成小山，允许自己连续听一首歌五十遍，允许自己被删除，允许自己原谅一个人之后又倒戈，允许一切发生',
     comeFrom: {
       somewhere: '微博',
+    },
+  },
+  {
+    content: '得之我幸失之我命\n 求而不得人生常态',
+    comeFrom: {
+      someone: '原创',
+    },
+  },
+  {
+    content: '打翻咖啡比喝下咖啡更令人提神',
+    comeFrom: {
+      someone: '原创',
     },
   },
 ]
