@@ -13,10 +13,10 @@
       —— {{ myQuote.comeFrom?.someone || '' }}{{ myQuote.comeFrom?.somewhere ? `「${myQuote.comeFrom.somewhere}」` : '' }}
     </div>
   </div>
-  <div v-if="isActive" class="footer-btn play-pause-toggler" @click="pause">
+  <div v-if="isActive" class="footer-btn play-pause-toggler" title="pause" @click="pause">
     <i class="svg-icon icon-pause" />
   </div>
-  <div v-if="!isActive" class="footer-btn play-pause-toggler" @click="resume">
+  <div v-if="!isActive" class="footer-btn play-pause-toggler" title="play" @click="resume">
     <i class="svg-icon icon-play" />
   </div>
 </template>
