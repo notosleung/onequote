@@ -1,11 +1,14 @@
 <template>
   <div class="footer">
-    <ToggleTheme />
+    <Back v-if="route.path !== '/'" />
   </div>
 </template>
 
 <script setup lang="ts">
-import ToggleTheme from './ToggleTheme.vue'
+import { useRoute } from 'vue-router'
+import Back from './Back.vue'
+
+const route = useRoute()
 </script>
 
 <style scoped>

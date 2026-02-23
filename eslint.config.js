@@ -37,6 +37,10 @@ export default antfu({
         order: [['template', 'script'], 'style'],
       }],
       'no-console': 'off',
+      'vue/no-v-text-v-html-on-component': ['error', {
+        allow: ['router-link', 'nuxt-link'],
+        ignoreElementNamespaces: false,
+      }],
       // 'vue/html-self-closing': ['error', {
       //   html: {
       //     normal: 'never',
