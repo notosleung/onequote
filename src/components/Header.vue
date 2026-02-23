@@ -3,7 +3,7 @@
     <a href="javascript:void(0)" class="logo" />
     <nav class="menu">
       <router-link to="/about" class="hover-underline">
-        关于-About
+        关于
       </router-link>
     </nav>
   </div>

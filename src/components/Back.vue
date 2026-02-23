@@ -1,7 +1,6 @@
 <template>
   <RouterLink
     :to="route.path.split('/').slice(0, -1).join('/') || '/'"
-    class="hover-underline"
     v-text="'cd ..'"
   />
 </template>
@@ -14,6 +13,16 @@ const route = useRoute()
 
 <style scoped>
 a {
-  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+a:hover {
+  color: rgba(0, 0, 0, 0.75) !important;
+}
+
+html.dark a {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+html.dark a:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 </style>
