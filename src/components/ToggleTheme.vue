@@ -1,26 +1,26 @@
 <template>
-  <div class="footer-btn theme-toggler" @click="toggleDark">
-    <i class="svg-icon" :class="themeClass" />
+  <div title="ToggleTheme" @click="toggleDark">
+    <slot />
   </div>
 </template>
 
 <script setup lang="ts">
-import { useDark } from '@vueuse/core'
-import { computed, nextTick } from 'vue'
+import { nextTick } from 'vue'
+import { useIsDarkStore } from '@/stores'
 
-const isDark = useDark()
-const themeClass = computed(() => {
-  return isDark.value ? 'icon-theme-dark' : 'icon-theme-light'
-})
+const isDarkStore = useIsDarkStore()
 
-// toggle dark mode with view transition
+/**
+ * Credit to [@hooray](https://github.com/hooray)
+ * @see https://github.com/vuejs/vitepress/pull/2347
+ */
 function toggleDark(event: MouseEvent) {
   // @ts-expect-error experimental API
   const isAppearanceTransition = document.startViewTransition
     && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   if (!isAppearanceTransition) {
-    isDark.value = !isDark.value
+    isDarkStore.toggleDark()
     return
   }
 
@@ -31,7 +31,7 @@ function toggleDark(event: MouseEvent) {
     Math.max(y, innerHeight - y),
   )
   const transition = document.startViewTransition(async () => {
-    isDark.value = !isDark.value
+    isDarkStore.toggleDark()
     await nextTick()
   })
   transition.ready
@@ -42,7 +42,7 @@ function toggleDark(event: MouseEvent) {
       ]
       document.documentElement.animate(
         {
-          clipPath: isDark.value
+          clipPath: isDarkStore.isDark
             ? [...clipPath].reverse()
             : clipPath,
         },
@@ -50,7 +50,7 @@ function toggleDark(event: MouseEvent) {
           duration: 400,
           easing: 'ease-out',
           fill: 'forwards',
-          pseudoElement: isDark.value
+          pseudoElement: isDarkStore.isDark
             ? '::view-transition-old(root)'
             : '::view-transition-new(root)',
         },
