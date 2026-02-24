@@ -3,12 +3,12 @@
     <div class="bracket left">
       『
     </div>
-    <div class="word" v-html="myQuote.content.replace(/\n/g, '<br>')" />
+    <div class="word" v-html="quoteArr[num]?.content.replace(/\n/g, '<br>')" />
     <div class="bracket right">
       』
     </div>
-    <div v-if="myQuote.comeFrom" class="author">
-      —— {{ myQuote.comeFrom?.someone || '' }}{{ myQuote.comeFrom?.somewhere ? `「${myQuote.comeFrom.somewhere}」` : '' }}
+    <div v-if="quoteArr[num]?.comeFrom" class="author">
+      —— {{ quoteArr[num]?.comeFrom?.someone || '' }}{{ quoteArr[num]?.comeFrom?.somewhere ? `「${quoteArr[num]?.comeFrom?.somewhere}」` : '' }}
     </div>
   </div>
   <div v-if="isActive" class="footer-btn play-pause-toggler" title="pause" @click="pause">
@@ -21,14 +21,14 @@
 
 <script setup lang="ts">
 import type { Quote } from '@/types/Quote'
-import { rand, useIntervalFn } from '@vueuse/core'
-import { reactive, ref } from 'vue'
+import { useIntervalFn } from '@vueuse/core'
+import { ref, shallowRef } from 'vue'
 import { quotes } from '@/libs/quotes'
 
-const quoteArr = reactive<Quote[]>(quotes)
-const myQuote = ref<Quote>(quoteArr[0] as Quote)
+const quoteArr = shallowRef<Quote[]>(quotes)
+const num = ref(0)
 const { pause, resume, isActive } = useIntervalFn(() => {
-  myQuote.value = quoteArr[rand(1, quotes.length - 1)] as Quote
+  num.value = Math.round(Math.random() * (quotes.length - 1))
 }, 5000)
 </script>
 
