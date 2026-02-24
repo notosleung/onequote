@@ -29,6 +29,13 @@ export const quotes: Quote[] = [
     },
   },
   {
+    content: '这是全天下最完美的阵容\n 我和你 你和我',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '透露',
+    },
+  },
+  {
     content: '我属于你的曾经\n 不属于我的命运',
     comeFrom: {
       someone: '五月天',
