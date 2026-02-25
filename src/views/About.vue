@@ -1,13 +1,9 @@
 <template>
-  <div>
-    Coming soon...
-    <br>
-    Expecting it to be a markdown page introducing the project, the author, and maybe some related links.
-  </div>
+  <AboutContent />
 </template>
 
 <script setup lang="ts">
-
+import AboutContent from '@/pages/About.md'
 </script>
 
 <style scoped>
