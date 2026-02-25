@@ -1,6 +1,11 @@
 <template>
   <div class="footer">
     <Back v-if="route.path !== '/'" />
+    <p class="footer-text">
+      <span class="copyright-text">&copy; 2026 Notos Leung.</span>
+      {{ '  ' }}
+      <span>Inspired by <a href="https://hitokoto.cn/" target="_blank" rel="noopener noreferrer">一言</a></span>.
+    </p>
   </div>
 </template>
 
@@ -12,5 +17,7 @@ const route = useRoute()
 </script>
 
 <style scoped>
-
+.footer-text {
+  text-align: end;
+}
 </style>

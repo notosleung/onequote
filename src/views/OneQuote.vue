@@ -1,14 +1,18 @@
 <template>
-  <div class="onequote-fullpage">
-    <div class="bracket left">
-      『
-    </div>
-    <div class="word" v-html="quoteArr[num]?.content.replace(/\n/g, '<br>')" />
-    <div class="bracket right">
-      』
-    </div>
-    <div v-if="quoteArr[num]?.comeFrom" class="author">
-      —— {{ quoteArr[num]?.comeFrom?.someone || '' }}{{ quoteArr[num]?.comeFrom?.somewhere ? `「${quoteArr[num]?.comeFrom?.somewhere}」` : '' }}
+  <div class="onequote-wrapper">
+    <div class="onequote-fullpage">
+      <div class="quote-area">
+        <div class="bracket left">
+          『
+        </div>
+        <div class="word" v-html="quoteArr[num]?.content.replace(/\n/g, '<br>')" />
+        <div class="bracket right">
+          』
+        </div>
+      </div>
+      <div v-if="quoteArr[num]?.comeFrom" class="author">
+        —— {{ quoteArr[num]?.comeFrom?.someone || '' }}{{ quoteArr[num]?.comeFrom?.somewhere ? `「${quoteArr[num]?.comeFrom?.somewhere}」` : '' }}
+      </div>
     </div>
   </div>
   <div v-if="isActive" class="footer-btn play-pause-toggler" title="pause" @click="pause">
@@ -33,24 +37,35 @@ const { pause, resume, isActive } = useIntervalFn(() => {
 </script>
 
 <style scoped>
+.onequote-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
 .onequote-fullpage {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.quote-area {
   position: relative;
   color: black;
   z-index: 1;
-  margin-top: 25vh;
-  margin-bottom: 25vh;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
-.onequote-fullpage .bracket {
+.quote-area .bracket {
   font-size: 30px;
 }
-.onequote-fullpage .bracket.left {
+.quote-area .bracket.left {
   position: absolute;
   left: 0;
   top: 0;
 }
-.onequote-fullpage .bracket.right {
+.quote-area .bracket.right {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -70,7 +85,7 @@ const { pause, resume, isActive } = useIntervalFn(() => {
   margin-top: 40px;
 }
 
-.dark .onequote-fullpage {
+.dark .quote-area {
   color: white;
 }
 .dark .onequote-fullpage .author {
@@ -78,9 +93,8 @@ const { pause, resume, isActive } = useIntervalFn(() => {
 }
 
 @media screen and (max-width: 560px) {
-  .onequote-fullpage {
-    margin-top: 15vh !important;
-    margin-bottom: 10vh !important;
+  .onequote-wrapper {
+    padding: 1rem 0;
   }
 
   .onequote-fullpage .word {
