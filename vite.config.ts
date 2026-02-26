@@ -6,7 +6,8 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './',
+  // eslint-disable-next-line node/prefer-global/process
+  base: process.env.GITHUB_ACTIONS ? '/onequote/' : './',
   plugins: [
     VueRouter({
       extensions: ['.vue', '.md'],
