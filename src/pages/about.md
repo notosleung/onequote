@@ -1,11 +1,10 @@
 <script setup>
 import { computed } from 'vue'
-import { useIsDarkStore } from '@/stores'
+import { isDark } from '@/stores'
 import ToggleTheme from '@/components/ToggleTheme.vue'
 
-const isDarkStore = useIsDarkStore()
 const themeClass = computed(() => {
-  return isDarkStore.isDark ? 'icon-theme-dark' : 'icon-theme-light'
+  return isDark.value ? 'icon-theme-dark' : 'icon-theme-light'
 })
 </script>
 <style scoped>
