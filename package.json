@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "vue-tsc -b && vite build",
+    "build": "vite-ssg build",
     "preview": "vite preview",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
@@ -27,7 +27,9 @@
     "simple-git-hooks": "^2.13.1",
     "typescript": "~5.9.3",
     "unplugin-vue-markdown": "^29.2.0",
+    "unplugin-vue-router": "^0.19.2",
     "vite": "^7.3.1",
+    "vite-ssg": "^28.3.0",
     "vue-tsc": "^3.1.5"
   },
   "simple-git-hooks": {
