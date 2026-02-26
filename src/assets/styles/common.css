@@ -1,3 +1,20 @@
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 9999;
+}
+.dark::view-transition-old(root) {
+  z-index: 9999;
+}
+.dark::view-transition-new(root) {
+  z-index: 1;
+}
 html {
   color: #333333;
   background: #ffffff;
@@ -176,7 +193,7 @@ input:-webkit-autofill {
 }
 .footer-btn.play-pause-toggler {
   right: 16px;
-  bottom: 112px;
+  bottom: 40px;
 }
 .svg-icon {
   display: inline-block;
@@ -213,7 +230,7 @@ input:-webkit-autofill {
 @media screen and (max-width: 560px) {
   .header {
     padding: 35px 0 20px 0;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
   }
   .header .menu {
     margin-right: -2px;
