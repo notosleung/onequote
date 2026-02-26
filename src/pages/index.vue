@@ -55,6 +55,7 @@ onMounted(() => {
 .onequote-fullpage {
   width: 100%;
   padding: 0 1rem;
+  user-select: none;
 }
 
 .quote-area {
