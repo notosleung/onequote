@@ -26,14 +26,20 @@
 <script setup lang="ts">
 import type { Quote } from '@/types/Quote'
 import { useIntervalFn } from '@vueuse/core'
-import { ref, shallowRef } from 'vue'
+import { onMounted, ref, shallowRef } from 'vue'
 import { quotes } from '@/libs/quotes'
 
 const quoteArr = shallowRef<Quote[]>(quotes)
 const num = ref(0)
+
+// 在服务端不会执行，因此要设置不立即执行
 const { pause, resume, isActive } = useIntervalFn(() => {
   num.value = Math.round(Math.random() * (quotes.length - 1))
-}, 5000)
+}, 5000, { immediate: false })
+
+onMounted(() => {
+  resume() // 在客户端激活时启动
+})
 </script>
 
 <style scoped>
