@@ -67,7 +67,9 @@ const themeClass = computed(() => {
 
 所展示的所有内容全是我自己收集而来的，其中包括之前说过的***段子***、***鸡汤***、***反鸡汤***，还有很多别的类型，比如影视作品中的台词、歌词之类，歌词有很多都是**五月天**的歌，我私心喜欢的，所以弄了很多上去，至于影视作品的台词，就纯靠我自己印象深的很少几个了，有点印象后就去搜搜原台词，然后再添加进`quotes`数组中。
 
-Click↓ 切换模式其实参考的[antfu.me](https://antfu.me/)，有个很炫酷的展开和收起效果
+切换模式其实参考的[antfu.me](https://antfu.me/)，在电脑端使用有个很炫酷的展开和收起效果
+
+Click↓
 
 <ToggleTheme class="theme-toggler">
   <i class="svg-icon" :class="themeClass" />
