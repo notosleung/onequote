@@ -35,7 +35,7 @@ html[transition] {
 body {
   max-width: 680px;
   min-height: 100%;
-  padding: 0 14px;
+  padding: 0 1.75rem;
   margin: 0 auto;
 }
 * {

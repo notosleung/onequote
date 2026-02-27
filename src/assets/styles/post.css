@@ -1,15 +1,15 @@
 .page-post {
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 2;
   word-break: break-all;
 }
 .page-post .title {
-  font-size: 18px;
+  font-size: 2.25rem;
   font-weight: bold;
   color: #666666;
 }
 .page-post .subtitle {
-  font-size: 12px;
+  font-size: 1rem;
   color: #999999;
 }
 .page-post .post > * {
@@ -22,22 +22,22 @@
 .page-post .post h1,
 .page-post .post h2 {
   font-weight: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   position: relative;
   cursor: pointer;
 }
-.page-post .post h1::before,
+/* .page-post .post h1::before,
 .page-post .post h2::before {
   content: '#';
   top: 0;
   font-weight: bold;
   padding-right: 6px;
-}
+} */
 .page-post h3,
 .page-post h4,
 .page-post h5,
 .page-post h6 {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: bold;
 }
 .page-post blockquote {
@@ -50,6 +50,19 @@
   color: #000000;
   margin: 0 2px;
   border-bottom: 1px solid #000000;
+}
+.page-post a.header-anchor {
+  float: left;
+  margin-left: -1em;
+  padding-right: 0.2em;
+  opacity: 0;
+  text-decoration: none;
+  border: 0 !important;
+}
+.page-post .post h1:hover a.header-anchor,
+.page-post .post h2:hover a.header-anchor {
+  opacity: 0.8;
+  font-weight: bold;
 }
 .page-post strong,
 .page-post b {
@@ -97,7 +110,7 @@
   line-height: 1.6;
 }
 .page-post code {
-  font-size: 13px;
+  font-size: 0.92rem;
   background-color: #eeeeee;
   word-break: break-all;
   padding: 3px 5px;
@@ -106,7 +119,7 @@
   color: #4d4d4c;
 }
 .page-post pre code {
-  font-size: 13px;
+  font-size: 1rem;
   background-color: transparent !important;
   word-break: keep-all;
   padding: 0;
@@ -152,7 +165,7 @@
   border-bottom: 0;
 }
 @media screen and (max-width: 560px) {
-  .page-post {
+  /* .page-post {
     font-size: 13px;
   }
   .page-post pre code {
@@ -160,5 +173,5 @@
   }
   .page-post .post > * {
     margin: 15px 0;
-  }
+  } */
 }
