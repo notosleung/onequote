@@ -1,33 +1,7 @@
-<script setup>
-import { computed } from 'vue'
-import { isDark } from '@/stores'
-import ToggleTheme from '@/components/ToggleTheme.vue'
-
-const themeClass = computed(() => {
-  return isDark.value ? 'icon-theme-dark' : 'icon-theme-light'
-})
-</script>
-<style scoped>
-.theme-toggler{
-  /* position: fixed; */
-  z-index: 99;
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0;
-}
-.theme-toggler i {
-  font-size: 22px;
-  background-color: #ffffff;
-}
-</style>
-
-# 关于OneQuote
+---
+title: 关于OneQuote
+date: 2026-02-25T23:25:00.000+08:00
+---
 
 真让写的时候，又不知道该说什么了，文笔和语言组织能力都非常不足……我想想，那就从源头开始，逐步地讲讲这个小东西的来源吧。
 
@@ -75,8 +49,35 @@ Click↓
   <i class="svg-icon" :class="themeClass" />
 </ToggleTheme>
 
-至于`Markdown`这边，我觉得还能再美化一下，其实有很多特性可以试着弄的，目前这个还没用过什么别的`Markdown`解析工具，或者高亮插件之类的……待我多折腾折腾。
+至于`Markdown`这边，我觉得还能再美化一下，其实有很多特性可以试着弄的，目前这个还没用过什么别的`Markdown`解析工具，或者`hihglight`插件之类的……待我多折腾折腾。
 
 ## 目标
 
 其实挺俗的，想手撸一个基于`Vue`的静态网站博客……这个项目用来做首页不知道还算可以吗？目前这个东西还是完全**CSR**的，先试着弄成静态的再看吧，弄**SSG**，再打通一下**CI/CD**！
+<script setup>
+import { computed } from 'vue'
+import { isDark } from '@/logics'
+
+const themeClass = computed(() => {
+  return isDark.value ? 'icon-theme-dark' : 'icon-theme-light'
+})
+</script>
+<style scoped>
+.theme-toggler{
+  /* position: fixed; */
+  z-index: 99;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+}
+.theme-toggler i {
+  font-size: 22px;
+  background-color: #ffffff;
+}
+</style>
