@@ -134,10 +134,17 @@ export const quotes: Quote[] = [
     },
   },
   {
+    content: '以为的日常\n 原来是无常',
+    comeFrom: {
+      someone: '五月天',
+      somewhere: '转眼',
+    },
+  },
+  {
     content: '这是我自传，最终章\n 写这首长诗，用一生时光\n 躯壳会解脱，药罐和空房\n 我从婴儿床，再重回光芒',
     comeFrom: {
       someone: '五月天',
-      somewhere: '自传',
+      somewhere: '转眼',
     },
   },
   {
