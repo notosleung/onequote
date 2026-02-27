@@ -4,6 +4,7 @@ import { routes } from 'vue-router/auto-routes'
 import App from './App.vue'
 import './assets/styles/common.css'
 import './assets/styles/theme-dark.css'
+import './assets/styles/post.css'
 
 export const createApp = ViteSSG(
   App,
