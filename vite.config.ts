@@ -1,6 +1,10 @@
 import { resolve } from 'node:path'
+import { unheadVueComposablesImports } from '@unhead/vue'
 import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
 
@@ -17,11 +21,35 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
     Markdown({
+      wrapperComponent: 'MdWrapper',
+      headEnabled: true,
       markdownItOptions: {
         html: true,
         linkify: true,
         typographer: true,
       },
+      // _id参数暂未使用；待需要使用时，用id替换_id
+      frontmatterPreprocess(frontmatter, options, _id, defaults) {
+        const head = defaults(frontmatter, options) // 自动处理 frontmatter → head
+        return { head, frontmatter }
+      },
+    }),
+    AutoImport({
+      imports: [
+        'vue',
+        unheadVueComposablesImports,
+        VueRouterAutoImports,
+        '@vueuse/core',
+      ],
+      dts: 'src/auto-imports.d.ts',
+    }),
+    Components({
+      extensions: ['vue', 'md'],
+      dts: 'src/components.d.ts',
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      resolvers: [
+        // 可添加 UI 库解析器，如 ElementPlus、Naive UI 等
+      ],
     }),
   ],
   resolve: {
@@ -30,6 +58,7 @@ export default defineConfig({
     },
   },
   // SSG 配置
+  // @ts-expect-error ssgOptions is for vite-ssg
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
