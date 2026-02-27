@@ -101,6 +101,21 @@ input:-webkit-autofill {
   background-color: #4a4a4a;
   color: #f9f9f9;
 }
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.body-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.body-content > :deep(*) {
+  flex: 1;
+}
 .hide {
   display: none !important;
 }
