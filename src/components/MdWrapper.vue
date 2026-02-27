@@ -26,8 +26,6 @@ interface Frontmatter {
 const { frontmatter } = defineProps<{
   frontmatter: Frontmatter
 }>()
-
-console.log('frontmatter', frontmatter)
 </script>
 
 <style scoped>
