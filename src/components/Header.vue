@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { isDark, toggleDark } from '@/stores'
+import { isDark, toggleDark } from '@/logics'
 </script>
 
 <style scoped>

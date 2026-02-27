@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { toggleDark } from '@/stores'
+import { toggleDark } from '@/logics'
 
 // const isDarkStore = useIsDarkStore()
 </script>
