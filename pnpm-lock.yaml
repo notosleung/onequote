@@ -48,6 +48,15 @@ importers:
       lint-staged:
         specifier: ^16.2.7
         version: 16.2.7
+      markdown-it-anchor:
+        specifier: ^9.2.0
+        version: 9.2.0(@types/markdown-it@14.1.2)(markdown-it@14.1.1)
+      markdown-it-github-alerts:
+        specifier: ^1.0.1
+        version: 1.0.1(markdown-it@14.1.1)
+      markdown-it-link-attributes:
+        specifier: ^4.0.1
+        version: 4.0.1
       simple-git-hooks:
         specifier: ^2.13.1
         version: 2.13.1
@@ -1707,8 +1716,22 @@ packages:
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
+  markdown-it-anchor@9.2.0:
+    resolution: {integrity: sha512-sa2ErMQ6kKOA4l31gLGYliFQrMKkqSO0ZJgGhDHKijPf0pNFM9vghjAh3gn26pS4JDRs7Iwa9S36gxm3vgZTzg==}
+    peerDependencies:
+      '@types/markdown-it': '*'
+      markdown-it: '*'
+
   markdown-it-async@2.2.0:
     resolution: {integrity: sha512-sITME+kf799vMeO/ww/CjH6q+c05f6TLpn6VOmmWCGNqPJzSh+uFgZoMB9s0plNtW6afy63qglNAC3MhrhP/gg==}
+
+  markdown-it-github-alerts@1.0.1:
+    resolution: {integrity: sha512-NNATF4QdoGI07hyCitoB2YqJ1YcNVCKT89ut2VtfFY9rkeFCXe/V2lOonKQLpJiq5DjiZZepf97BJx5xOjFIAw==}
+    peerDependencies:
+      markdown-it: '>= 13.0.0'
+
+  markdown-it-link-attributes@4.0.1:
+    resolution: {integrity: sha512-pg5OK0jPLg62H4k7M9mRJLT61gUp9nvG0XveKYHMOOluASo9OEF13WlXrpAp2aj35LbedAy3QOCgQCw0tkLKAQ==}
 
   markdown-it@14.1.1:
     resolution: {integrity: sha512-BuU2qnTti9YKgK5N+IeMubp14ZUKUUw7yeJbkjtosvHiP0AZ5c8IAgEMk79D0eC8F23r4Ac/q8cAIFdm2FtyoA==}
@@ -4118,10 +4141,21 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  markdown-it-anchor@9.2.0(@types/markdown-it@14.1.2)(markdown-it@14.1.1):
+    dependencies:
+      '@types/markdown-it': 14.1.2
+      markdown-it: 14.1.1
+
   markdown-it-async@2.2.0:
     dependencies:
       '@types/markdown-it': 14.1.2
       markdown-it: 14.1.1
+
+  markdown-it-github-alerts@1.0.1(markdown-it@14.1.1):
+    dependencies:
+      markdown-it: 14.1.1
+
+  markdown-it-link-attributes@4.0.1: {}
 
   markdown-it@14.1.1:
     dependencies:

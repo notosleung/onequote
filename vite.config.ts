@@ -1,6 +1,9 @@
 import { resolve } from 'node:path'
 import { unheadVueComposablesImports } from '@unhead/vue'
 import vue from '@vitejs/plugin-vue'
+import anchor from 'markdown-it-anchor'
+import GitHubAlerts from 'markdown-it-github-alerts'
+import LinkAttributes from 'markdown-it-link-attributes'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
@@ -25,9 +28,28 @@ export default defineConfig({
       wrapperComponent: id => id.endsWith('index.md') ? 'IndexWrapper' : 'MdWrapper',
       headEnabled: true,
       markdownItOptions: {
-        // html: true,
-        // linkify: true,
+        html: true,
+        linkify: true,
         // typographer: true,
+      },
+      markdownItSetup(md) {
+        md.use(anchor, {
+          permalink: anchor.permalink.linkInsideHeader({
+            symbol: '#',
+            // placement: 'after',
+          }),
+          slugify: s => s.trim().toLowerCase().replace(/\s+/g, '-'),
+        })
+
+        md.use(LinkAttributes, {
+          matcher: (link: string) => /^https?:\/\//.test(link),
+          attrs: {
+            target: '_blank',
+            rel: 'noopener',
+          },
+        })
+
+        md.use(GitHubAlerts)
       },
       // _id参数暂未使用；待需要使用时，用id替换_id
       frontmatterPreprocess(frontmatter, options, _id, defaults) {
