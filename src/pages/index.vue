@@ -27,7 +27,7 @@
 import type { Quote } from '@/types/Quote'
 import { useIntervalFn } from '@vueuse/core'
 import { onMounted, ref, shallowRef } from 'vue'
-import { quotes } from '@/libs/quotes'
+import { quotes } from '@/data/quotes'
 
 const quoteArr = shallowRef<Quote[]>(quotes)
 const num = ref(0)
