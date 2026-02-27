@@ -15,18 +15,19 @@ export default defineConfig({
   plugins: [
     VueRouter({
       extensions: ['.vue', '.md'],
+      routesFolder: 'pages',
       dts: 'src/typed-router.d.ts',
     }),
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
     Markdown({
-      wrapperComponent: 'MdWrapper',
+      wrapperComponent: id => id.endsWith('index.md') ? 'IndexWrapper' : 'MdWrapper',
       headEnabled: true,
       markdownItOptions: {
-        html: true,
-        linkify: true,
-        typographer: true,
+        // html: true,
+        // linkify: true,
+        // typographer: true,
       },
       // _id参数暂未使用；待需要使用时，用id替换_id
       frontmatterPreprocess(frontmatter, options, _id, defaults) {
