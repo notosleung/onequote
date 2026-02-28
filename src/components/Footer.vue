@@ -4,7 +4,7 @@
     <p class="footer-text">
       <span class="copyright-text">&copy; 2026 Notos Leung.</span>
       {{ '  ' }}
-      <span>Inspired by <a href="https://hitokoto.cn/" target="_blank" rel="noopener noreferrer">一言</a></span>.
+      <span v-if="route.path === '/'">Inspired by <a href="https://hitokoto.cn/" target="_blank" rel="noopener noreferrer">一言</a>.</span>
     </p>
   </div>
 </template>
@@ -19,5 +19,7 @@ const route = useRoute()
 <style scoped>
 .footer-text {
   text-align: end;
+  padding: 10px 0;
+  font-size: 0.9rem;
 }
 </style>

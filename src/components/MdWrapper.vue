@@ -1,5 +1,5 @@
 <template>
-  <div class="page page-post">
+  <div class="page-post">
     <h1 v-if="frontmatter.title" :id="frontmatter.title" class="title">
       {{ frontmatter.title }}
     </h1>

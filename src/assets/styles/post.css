@@ -1,7 +1,9 @@
 .page-post {
   font-size: 1rem;
   line-height: 2;
-  word-break: break-all;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .page-post .title {
   font-size: 2.25rem;
@@ -21,10 +23,10 @@
 }
 .page-post .post h1,
 .page-post .post h2 {
-  font-weight: normal;
-  font-size: 1.0625rem;
+  font-weight: bold;
+  font-size: 1.5rem;
   position: relative;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 /* .page-post .post h1::before,
 .page-post .post h2::before {
@@ -37,7 +39,7 @@
 .page-post h4,
 .page-post h5,
 .page-post h6 {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 .page-post blockquote {
@@ -52,9 +54,13 @@
   border-bottom: 1px solid #000000;
 }
 .page-post a.header-anchor {
-  float: left;
-  margin-left: -1em;
-  padding-right: 0.2em;
+  /* float: left; */
+  position: absolute;
+  left: -1em;
+  margin-top: 0.125em;
+  /* margin-left: -1.2em; */
+  padding-right: 0.4em;
+  font-size: 0.85em;
   opacity: 0;
   text-decoration: none;
   border: 0 !important;
@@ -112,7 +118,9 @@
 .page-post code {
   font-size: 0.92rem;
   background-color: #eeeeee;
-  word-break: break-all;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   padding: 3px 5px;
   margin: 0 4px;
   border-radius: 5px;

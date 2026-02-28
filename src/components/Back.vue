@@ -14,6 +14,7 @@ const route = useRoute()
 <style scoped>
 a {
   color: rgba(0, 0, 0, 0.5) !important;
+  font-size: 1rem;
 }
 a:hover {
   color: rgba(0, 0, 0, 0.75) !important;
