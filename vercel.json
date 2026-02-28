@@ -3,13 +3,8 @@
   "devCommand": "pnpm dev",
   "installCommand": "pnpm install",
   "outputDirectory": "dist",
-  "redirects": [
-    {
-      "source": "/:path(.*/)$",
-      "destination": "/:path",
-      "permanent": false
-    }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     {
       "source": "/(.*)",
