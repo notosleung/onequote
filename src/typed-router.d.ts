@@ -30,11 +30,11 @@ declare module 'vue-router/auto-routes' {
       Record<never, never>,
       | never
     >,
-    '/[...rest]': RouteRecordInfo<
-      '/[...rest]',
-      '/:rest(.*)',
-      { rest: ParamValue<true> },
-      { rest: ParamValue<false> },
+    '/[...404]': RouteRecordInfo<
+      '/[...404]',
+      '/:404(.*)',
+      { 404: ParamValue<true> },
+      { 404: ParamValue<false> },
       | never
     >,
     '/about': RouteRecordInfo<
@@ -77,9 +77,9 @@ declare module 'vue-router/auto-routes' {
       views:
         | never
     }
-    'pages/[...rest].md': {
+    'pages/[...404].md': {
       routes:
-        | '/[...rest]'
+        | '/[...404]'
       views:
         | never
     }
