@@ -45,9 +45,7 @@ html.dark .page-post a {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-html.dark .page-post strong {
-  color: #ddd;
-}
+html.dark .page-post strong,
 html.dark .page-post b {
   color: #ddd;
 }

@@ -1,4 +1,4 @@
 ---
 title: OneQuote
-description: OneQuote
+description: OneQuote, one-quote
 ---

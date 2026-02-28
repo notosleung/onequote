@@ -4,6 +4,7 @@
   word-break: break-word;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  word-spacing: -0.25em;
 }
 .page-post .title {
   font-size: 2.25rem;
@@ -73,6 +74,8 @@
 .page-post strong,
 .page-post b {
   color: #000000;
+  font-weight: bold;
+  /* margin: 0 0.1rem; */
 }
 .page-post .post ul {
   margin-left: 16px;
