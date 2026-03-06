@@ -1,4 +1,4 @@
-# [@notos9312/onequote](https://github.com/notos9312/onequote)
+# [@notosleung/onequote](https://github.com/notosleung/onequote)
 
 ## Dev
 
