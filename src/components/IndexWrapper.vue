@@ -5,13 +5,13 @@
         <div class="bracket left">
           『
         </div>
-        <div class="word" v-html="quoteArr[num]?.content.replace(/\n/g, '<br>')" />
+        <div class="word" v-html="quotes[num]?.content.replace(/\n/g, '<br>')" />
         <div class="bracket right">
           』
         </div>
       </div>
-      <div v-if="quoteArr[num]?.comeFrom" class="author">
-        —— {{ quoteArr[num]?.comeFrom?.someone || '' }}{{ quoteArr[num]?.comeFrom?.somewhere ? `「${quoteArr[num]?.comeFrom?.somewhere}」` : '' }}
+      <div v-if="quotes[num]?.comeFrom" class="author">
+        —— {{ quotes[num]?.comeFrom?.someone || '' }}{{ quotes[num]?.comeFrom?.somewhere ? `「${quotes[num]?.comeFrom?.somewhere}」` : '' }}
       </div>
     </div>
   </div>
@@ -24,9 +24,8 @@
 </template>
 
 <script setup lang="ts">
-import type { Quote } from '@/types/Quote'
 import { useIntervalFn } from '@vueuse/core'
-import { onMounted, ref, shallowRef } from 'vue'
+import { onMounted, ref } from 'vue'
 import { quotes } from '../../data/quotes'
 
 // 接收来自index.md的frontmatter，但页面中不需要使用它
@@ -34,7 +33,6 @@ defineProps<{
   frontmatter?: Record<string, unknown>
 }>()
 
-const quoteArr = shallowRef<Quote[]>(quotes)
 const num = ref(0)
 
 // 在服务端不会执行，因此要设置不立即执行
