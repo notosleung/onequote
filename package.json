@@ -9,7 +9,8 @@
     "build": "vite-ssg build",
     "preview": "vite preview --host",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "pre-commit": "nano-staged"
   },
   "dependencies": {
     "@unhead/vue": "^2.1.9",
